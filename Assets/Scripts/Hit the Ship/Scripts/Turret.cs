@@ -34,14 +34,12 @@ public class Turret : MonoBehaviour
     private float step = 0.5f;
 
     // Start is called before the first frame update
-    void Start()
-    {
+    private void Start() {
         aSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
-    void FixedUpdate()
-    {        
+    private void FixedUpdate() {        
         if(transform.rotation.y != targetRot.y ) {
             transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(transform.rotation.x, targetRot.y, transform.rotation.z), step * 2f);            
         }
