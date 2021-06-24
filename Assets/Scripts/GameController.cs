@@ -36,6 +36,7 @@ public class GameController : MonoBehaviour {
                 lastSpawn = farShipLane;
             }
         }        
+        
         StartCoroutine(nameof(Timer));
     }
 

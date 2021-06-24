@@ -26,7 +26,7 @@ public class EnemyShip : MonoBehaviour {
             gameController.enemies.Remove(gameObject);
         }
         
-        if(aSource != null) aSource.Play();
+        //if(aSource != null) aSource.Play();
         Destroy(gameObject);
     }
 

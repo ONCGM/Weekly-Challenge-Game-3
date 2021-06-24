@@ -12,6 +12,7 @@ public class BulletBehaviour : MonoBehaviour
 
     private void Start() {
         rb = GetComponent<Rigidbody>();
+        Destroy(gameObject, 20f);
     }
 
     private void FixedUpdate() {
@@ -20,7 +21,7 @@ public class BulletBehaviour : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         if(other.CompareTag(enemyTag))
-            other.GetComponent<EnemyShip>()?.Damage(1);
+            other.GetComponent<EnemyShip>().Damage(1);
         
         Destroy(gameObject);
     }
